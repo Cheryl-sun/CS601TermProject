@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #d5d1e2;
+    color: #1c1b1f;
+  }
+  
+  .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f0ec;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #333;
+  }
+  
+  .navbar a {
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .btn-dark {
+    background-color: black;
+    color: white !important;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 6rem;
+    flex: 1;
+  }
+  
+  .text-section {
+    max-width: 50%;
+  }
+  
+  .text-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .text-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-light {
+    background-color: #f9cfcf;
+    color:black;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid #444;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  /* Remove underline and blue color from Link buttons */
+    a.btn-dark, a.btn-light {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .image-section img.portrait {
+    width: 300px;
+    height: 400px;
+    border-radius: 2rem;
+    object-fit: cover;
+  }
+  
+  .contact-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    z-index: 1;
+  }
+  
+  /* Background split effect */
+  .contact-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* left half */
+    height: 100%;
+    background-color: #f5f5dc; /* beige */
+    z-index: 0;
+  }
+  
+  /* Keep form section on top */
+  .form-section {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    width: 100%;
+    background-color: transparent; /* no extra background */
+  }
+  .contact-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  
+  
+  .left-half h2 {
+    font-size: 3.5rem;
+    color: #1c1b1f;
+    margin: 0;
+    padding: 3rem;
+    position: relative;     
+    z-index: 2;            
+  }
+
+  .left-image {
+    margin-top: 1.5rem;
+    width: 250px;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    position: relative;   
+    z-index: 2;           /* ensure it's above the background */
+  }
+  
+  
+  
+  /* Right: purple with form */
+  .right-half {
+    flex: 1;
+    background-color: #d5d1e2;
+    padding: 1rem;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+  }
+  
+  .right-half form {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  /* ✅ Rounded inputs, dropdown, and textarea */
+    .right-half input,
+    .right-half select,
+    .right-half textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+}
+/*education page*/
+.education-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.education-image {
+  flex: 1;
+  background-color: #f0f0f0;
+}
+
+.education-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.education-text {
+  flex: 1;
+  background-color: #f5f5f0;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.education-text h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.education-text h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+/* experience section */
+.experience-section {
+  background-color: #f1f0ec;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.experience-heading {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.experience-card {
+  background-color: #cfc28f;
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 150px; /* ✅ fixed width */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional polish */
+}
+
+
+/*album!*/
+.album-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f1f0ec;
+}
+
+.album-grid {
+  display: flex;
+  gap: 1rem;
+}
+
+.album-image {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #333;
+}
+
+.arrow:hover {
+  color: black;
+}
+/*quote*/
+.quote-section {
+  background-color: #d5d1e2;
+  padding: 5rem 3rem;
+  text-align: left;
+}
+
+.quote-heading {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: 'Georgia', serif;
+  color: #1c1b1f;
+}
+
+.quote-grid {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.quote-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #1c1b1f;
+}
+
+.quote-author {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+/*contact teaser*/
+.contact-teaser {
+  display: flex;
+  align-items: stretch;
+  background-color: #f9cfcf;
+  padding: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.teaser-text {
+  flex: 0 0 50%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.teaser-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.teaser-text p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-light {
+  padding: 0.8rem 1.5rem;
+  background-color: white;
+  color: #1c1b1f;
+  border: 1px solid #1c1b1f;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  width: fit-content;
+}
+
+.teaser-image {
+  flex: 0 0 40%;
+  height: 100%;
+}
+
+.teaser-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/*FAQ*/
+.faq-section {
+  display: flex;
+  padding: 4rem 2rem;
+  background-color: #f1f0ec;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.faq-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.faq-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: 'Georgia', serif;
+}
+
+.faq-item {
+  border-top: 1px solid #333;
+  padding: 1.2rem 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faq-item h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.faq-item span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.faq-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #1c1b1f;
+}
+
+.faq-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-image {
+  width: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+/*signature*/
+.signature-container {
+  margin-top: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.signature-canvas {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 0.05rem;
+  cursor: crosshair;
+}
