@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/CS601TermProject/static/css/main.e44bfbef.css",
-    "main.js": "/CS601TermProject/static/js/main.5669c8a5.js",
+    "main.js": "/CS601TermProject/static/js/main.a59beec8.js",
     "index.html": "/CS601TermProject/index.html",
     "main.e44bfbef.css.map": "/CS601TermProject/static/css/main.e44bfbef.css.map",
-    "main.5669c8a5.js.map": "/CS601TermProject/static/js/main.5669c8a5.js.map"
+    "main.a59beec8.js.map": "/CS601TermProject/static/js/main.a59beec8.js.map"
   },
   "entrypoints": [
     "static/css/main.e44bfbef.css",
-    "static/js/main.5669c8a5.js"
+    "static/js/main.a59beec8.js"
   ]
 }
